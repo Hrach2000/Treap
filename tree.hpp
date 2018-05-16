@@ -157,4 +157,5 @@ public:
   virtual bool exists(int value) { return m_tree.find(value); }
   virtual void remove(int value) { m_tree.erase(value); }
   virtual void print() { TreapNode<int>::print(m_tree.root); }
+  int height() { return m_tree.height(); }
 };
