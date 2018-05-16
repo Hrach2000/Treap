@@ -35,8 +35,8 @@ private:
   int _height;
 
 public:
-  Treap(T key = 0) {
-    root = new TreapNode<T>(key, NULL, NULL, -1);
+  Treap() {
+    root = nullptr;
     _height = 0;
   }
   ~Treap() { delete root; }
@@ -73,8 +73,7 @@ public:
     split(root, l, r, x0);
   }
   void insert(TreapNode<T> *n) {
-    if (root->priority < 0) {
-      delete root;
+    if (root == nullptr) {
       root = n;
       return;
     }

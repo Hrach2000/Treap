@@ -4,6 +4,7 @@ using namespace std;
 typedef long long ll;
 typedef unsigned long long ull;
 int main() {
+  srand(time(NULL));
   ll n;
   cin >> n;
   Tree mtree;
